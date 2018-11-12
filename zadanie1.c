@@ -18,7 +18,7 @@ int main()
 
     suma = 1;
 
-    // silnia z uzyciem pêtli FOR
+    // silnia z uzyciem pÄ™tli FOR
 
     for (licznik = 1; licznik <= liczba; licznik++)
     {
