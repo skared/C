@@ -1,85 +1,33 @@
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
 #include <math.h>
-
-int wyb=0;
-float a, b, c, r, pol, h=0.0;
-const float PI=3.14;
-
+ 
 int main()
 {
-    for(;;){
-    printf("MENU GLOWNE: \n");
-    printf("1 - Kolo \n");
-    printf("2 - Prostokat \n");
-    printf("3 - Trojkat \n");
-    printf("4 - Trapez \n");
-    printf("5 - Kwadrat \n");
-    printf("6 - WYJSCIE \n");
-
-    printf("Wybierz bryle: \n");
-    scanf("%d", &wyb);
-
-        switch(wyb){
-        case 1:{
-                printf("Podaj : \n");
-                scanf("%f", &r);
-                pol=(r * r * PI);
-                printf("Pole kola o promieniu %.1f wynosi %.1f\n", r, pol);
-                break;
+    unsigned int n, k;
+ 
+    printf("Podaj n: \n");
+ 
+    scanf("%d", &n);
+ 
+    printf("Podaj k: \n");
+ 
+    scanf("%d", &k);
+ 
+    if (k == 0 || k == n) {
+        printf("1");
+    } else {
+        double wynik = 1;
+ 
+        for (int i = 1; i <= k; i++)
+        {
+            wynik = wynik * (n - i + 1) / i;
         }
-        case 2:{
-                printf("Podaj bok A: \n");
-                scanf("%f", &a);
-                printf("Podaj bok B: \n");
-                scanf("%f", &b);
-                pol=(a * b);
-                printf("Pole prostokata o boku A %.1f i boku B %.1f wynosi %.1f\n", a, b, pol);
-                break;
-        }
-        case 3:{
-                printf("Podaj bok A: \n");
-                scanf("%f", &a);
-                printf("Podaj wysokosc: \n");
-                scanf("%f", &h);
-                pol=(a * h)/ 2;
-                printf("Pole trojkata o boku A %.1f i wysokosci %.1f wynosi %.1f\n", a, h, pol);
-                break;
-        }
-        case 4:{
-                printf("Podaj bok A: \n");
-                scanf("%f", &a);
-                printf("Podaj bok B: \n");
-                scanf("%f", &b);
-                printf("Podaj wysokosc: \n");
-                scanf("%f", &h);
-                pol=(a + b)*h / 2;
-                printf("Pole trapezu o boku A %.1f boku B %.1f i wysokosc %.1f wynosi %.1f\n", a, b,h,pol);
-                break;
-        }
-        case 5:{
-                if(wyb == 5){
-                    printf("Podaj bok A: \n");
-                    scanf("%f", &a);
-                    pol=(a*a);
-                    printf("Pole kwadratu wynosi %.1f\n", pol);
-                    break;
-
-                }
-        }
-
-        case 6:{
-                exit(0);
-        }
-        default:{
-                printf("Zly wybor.\n");
-                break;
-        }
-        }
-        getchar();getchar();
-        system("cls");
+ 
+        long w = wynik;
+ 
+        printf("Symbol (dwumian) Newtona wynosi: %d", w);
     }
-
+ 
     return 0;
 }
