@@ -15,8 +15,7 @@ int main()
     printf("2 - Prostokat \n");
     printf("3 - Trojkat \n");
     printf("4 - Trapez \n");
-    printf("5 - Kwadrat \n");
-    printf("6 - WYJSCIE \n");
+    printf("5 - WYJSCIE \n");
 
     printf("Wybierz bryle: \n");
     scanf("%d", &wyb);
@@ -58,18 +57,8 @@ int main()
                 printf("Pole trapezu o boku A %.1f boku B %.1f i wysokosc %.1f wynosi %.1f\n", a, b,h,pol);
                 break;
         }
+
         case 5:{
-                if(wyb == 5){
-                    printf("Podaj bok A: \n");
-                    scanf("%f", &a);
-                    pol=(a*a);
-                    printf("Pole kwadratu wynosi %.1f\n", pol);
-                    break;
-
-                }
-        }
-
-        case 6:{
                 exit(0);
         }
         default:{
